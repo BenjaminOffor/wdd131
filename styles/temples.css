@@ -42,7 +42,7 @@ nav ul {
     list-style: none;
     display: none;
     flex-direction: column;
-    background-color: #003366;
+    background-color: #c00d55;
     width: 100%;
     text-align: center;
 }
@@ -97,6 +97,10 @@ figcaption {
     font-weight: bold;
     color: #004080;
 }
+figure:hover img {
+    transform: scale(0.9) translateY(-5px);
+}
+
 
 /* FOOTER */
 footer {
