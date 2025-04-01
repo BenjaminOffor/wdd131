@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Country Page - Ghana</title>
+    <link rel="stylesheet" href="css/place.css">
+    <script src="js/place.js" defer></script>
+</head>
+<body>
+    <header>
+        <h1>Ghana</h1>
+    </header>
+    
+    <main>
+        <section class="hero">
+            <picture>
+                <source srcset="images/hero-desktop.webp" media="(min-width: 768px)">
+                <img src="images/hero-mobile.webp" alt="Beautiful scenery of Ghana">
+            </picture>
+        </section>
+        
+        <section class="info">
+            <h2>About Ghana</h2>
+            <p>Ghana, located in West Africa, is known for its rich culture, historical landmarks, and vibrant cities.</p>
+        </section>
+        
+        <section class="weather">
+            <h2>Weather <span class="weather-icon">⛅</span></h2>
+            <p>Temperature: <span id="temp">28</span>&deg;C</p>
+            <p>Wind Speed: <span id="wind">10</span> km/h</p>
+            <p>Wind Chill: <span id="windchill">N/A</span></p>
+        </section>
+    </main>
+    
+    <footer>
+        <p>&copy; <span id="year"></span> | Last updated: <span id="last-modified"></span></p>
+    </footer>
+</body>
+</html>

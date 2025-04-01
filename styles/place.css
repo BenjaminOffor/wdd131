@@ -1,0 +1,60 @@
+/* Global Styles */
+:root {
+    --primary-color: #004080;
+    --secondary-color: #0080ff;
+    --text-color: #333;
+    --background-color: #f4f4f4;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: var(--background-color);
+    color: var(--text-color);
+}
+
+/* Header */
+header {
+    background-color: var(--primary-color);
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+/* Hero Section */
+.hero {
+    text-align: center;
+}
+
+.hero img {
+    width: 100%;
+    max-height: 400px;
+    object-fit: cover;
+}
+
+/* Weather Section */
+.weather {
+    text-align: center;
+    padding: 20px;
+}
+
+.weather-icon {
+    font-size: 2rem;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    background-color: var(--primary-color);
+    color: white;
+    padding: 10px;
+}
+
+/* Responsive Design */
+@media screen and (min-width: 768px) {
+    .hero {
+        display: flex;
+        justify-content: center;
+    }
+}
