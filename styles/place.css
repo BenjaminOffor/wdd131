@@ -14,11 +14,12 @@ header {
     font-size: 1.5rem;
 }
 
-.hero img {
-    width: 100%;
-    height: auto;
-    display: block;
+.hero {
+    width: 100vw; /* Full viewport width */
+    height: auto; /* Maintain aspect ratio */
+    display: block; /* Remove any inline spacing */
 }
+
 
 main {
     padding: 20px;
