@@ -3,40 +3,47 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ghana Information</title>
+    <title>Discover Ghana</title>
     <link rel="stylesheet" href="styles/place.css">
 </head>
 <body>
     <header>
-        <h1>Welcome to Ghana</h1>
+        Discover Ghana
     </header>
 
+    <!-- Hero Image -->
     <section class="hero">
-        <img src="images/hero-large.webp" alt="Ghana Landscape" class="hero-image">
+        <img src="images/ghana-hero.webp" 
+             srcset="images/ghana-hero-small.webp 480w, 
+                     images/ghana-hero-medium.webp 768w, 
+                     images/ghana-hero-large.webp 1200w" 
+             sizes="(max-width: 480px) 100vw, 
+                    (max-width: 768px) 100vw, 
+                    1200px" 
+             alt="Beautiful view of Ghana" 
+             class="hero-image">
     </section>
 
     <main>
+        <!-- Country Info -->
         <section class="country-info">
             <h2>About Ghana</h2>
-            <p><strong>Capital:</strong> <span id="capital"></span></p>
-            <p><strong>Population:</strong> <span id="population"></span></p>
-            <p><strong>Currency:</strong> <span id="currency"></span></p>
-            <p><strong>Official Language:</strong> <span id="language"></span></p>
+            <p>Ghana, located in West Africa, is known for its rich culture, historic sites, and beautiful landscapes. The capital is Accra.</p>
         </section>
 
+        <!-- Weather Section -->
         <section class="weather">
-            <h2>Weather</h2>
-            <p><strong>Temperature:</strong> <span id="temperature">30</span>°C</p>
-            <p><strong>Wind Speed:</strong> <span id="windSpeed">12</span> km/h</p>
-            <p><strong>Wind Chill:</strong> <span id="windChill">N/A</span></p>
-            <span class="weather-icon">⛅</span>
+            <h2>Weather <span class="weather-icon">⛅</span></h2>
+            <p>Temperature: <span id="temperature">28</span>°C</p>
+            <p>Wind Speed: <span id="windSpeed">12</span> km/h</p>
+            <p>Wind Chill: <span id="windChill">N/A</span></p>
         </section>
     </main>
 
     <footer>
-        <p>&copy; <span id="year"></span> Ghana Info | Last Updated: <span id="lastModified"></span></p>
+        <p>&copy; <span id="year"></span> | Last Updated: <span id="lastModified"></span></p>
     </footer>
 
-    <script src="scripts/place.js"></script>
+    <script src="scripts/place.js" defer></script>
 </body>
 </html>

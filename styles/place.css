@@ -1,36 +1,33 @@
-/* Define Global Variables */
-:root {
-    --primary-color: #006400;
-    --secondary-color: #f4f4f4;
-    --text-color: #333;
-    --border-radius: 10px;
-    --shadow-effect: 0px 0px 10px rgba(0, 0, 0, 0.1);
-}
-
-/* Apply global styles */
+/* General Styling */
 body {
-    font-family: 'Poppins', sans-serif;
+    font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: var(--secondary-color);
-    color: var(--text-color);
+    background-color: #f4f4f4;
+    color: #333;
 }
 
 /* Header */
 header {
-    background-color: var(--primary-color);
+    background-color: #006400;
     color: white;
     text-align: center;
     padding: 1rem;
     font-size: 1.8rem;
-    font-weight: bold;
 }
 
 /* Hero Image */
 .hero {
-    width: 100vw;
-    height: auto;
-    display: block;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.hero-image {
+    width: 100%;
+    max-height: 350px;
     object-fit: cover;
 }
 
@@ -40,13 +37,13 @@ main {
     text-align: center;
 }
 
-/* Country Information and Weather */
+/* Info Sections */
 .country-info, .weather {
     background: white;
     padding: 20px;
     margin: 20px auto;
-    border-radius: var(--border-radius);
-    box-shadow: var(--shadow-effect);
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
     max-width: 500px;
 }
 
@@ -57,30 +54,50 @@ main {
     margin-top: 10px;
 }
 
-/* Weather Heading with ::after Emoticon */
-.weather h2::after {
-    content: " ⛅"; /* Add weather emoticon */
-    font-size: 1.5rem;
-}
-
 /* Footer */
 footer {
-    background-color: var(--primary-color);
+    background-color: #006400;
     color: white;
     text-align: center;
     padding: 1rem;
-    position: relative;
-    bottom: 0;
     width: 100%;
 }
 
-/* Media Queries for Responsive Design */
+/* ✅ Mobile Responsive Design */
 @media (max-width: 768px) {
-    .country-info, .weather {
-        max-width: 90%;
+    header {
+        font-size: 1.5rem;
+        padding: 0.8rem;
     }
 
-    .weather h2::after {
+    .hero-image {
+        max-height: 250px;
+    }
+
+    main {
+        padding: 10px;
+    }
+
+    .country-info, .weather {
+        padding: 15px;
+        max-width: 90%;
+    }
+}
+
+@media (max-width: 480px) {
+    header {
         font-size: 1.2rem;
+    }
+
+    .hero-image {
+        max-height: 200px;
+    }
+
+    .country-info, .weather {
+        padding: 10px;
+    }
+
+    .weather-icon {
+        font-size: 1.5rem;
     }
 }
