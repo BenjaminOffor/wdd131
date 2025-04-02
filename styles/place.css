@@ -1,50 +1,86 @@
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #f4f4f4;
-    color: #333;
+/* Define Global Variables */
+:root {
+    --primary-color: #006400;
+    --secondary-color: #f4f4f4;
+    --text-color: #333;
+    --border-radius: 10px;
+    --shadow-effect: 0px 0px 10px rgba(0, 0, 0, 0.1);
 }
 
+/* Apply global styles */
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: var(--secondary-color);
+    color: var(--text-color);
+}
+
+/* Header */
 header {
-    background-color: #006400;
+    background-color: var(--primary-color);
     color: white;
     text-align: center;
     padding: 1rem;
-    font-size: 1.5rem;
+    font-size: 1.8rem;
+    font-weight: bold;
 }
 
+/* Hero Image */
 .hero {
-    width: 100vw; /* Full viewport width */
-    height: auto; /* Maintain aspect ratio */
-    display: block; /* Remove any inline spacing */
+    width: 100vw;
+    height: auto;
+    display: block;
+    object-fit: cover;
 }
 
-
+/* Main Content */
 main {
     padding: 20px;
     text-align: center;
 }
 
+/* Country Information and Weather */
 .country-info, .weather {
     background: white;
-    padding: 15px;
+    padding: 20px;
     margin: 20px auto;
-    border-radius: 10px;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow-effect);
     max-width: 500px;
 }
 
+/* Weather Icon */
 .weather-icon {
+    font-size: 2rem;
+    display: block;
+    margin-top: 10px;
+}
+
+/* Weather Heading with ::after Emoticon */
+.weather h2::after {
+    content: " ⛅"; /* Add weather emoticon */
     font-size: 1.5rem;
 }
 
+/* Footer */
 footer {
-    background-color: #006400;
+    background-color: var(--primary-color);
     color: white;
     text-align: center;
     padding: 1rem;
     position: relative;
     bottom: 0;
     width: 100%;
+}
+
+/* Media Queries for Responsive Design */
+@media (max-width: 768px) {
+    .country-info, .weather {
+        max-width: 90%;
+    }
+
+    .weather h2::after {
+        font-size: 1.2rem;
+    }
 }
