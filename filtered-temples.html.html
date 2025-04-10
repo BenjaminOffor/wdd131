@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Temple Gallery</title>
+    <link rel="stylesheet" href="styles/filtered-temples.css">
+</head>
+
+<body>
+    <header>
+        <h1>Temple Gallery</h1>
+        <nav>
+            <button onclick="filterTemples('home')">Home</button>
+            <button onclick="filterTemples('old')">Old Temples</button>
+            <button onclick="filterTemples('new')">New Temples</button>
+            <button onclick="filterTemples('large')">Large Temples</button>
+            <button onclick="filterTemples('small')">Small Temples</button>
+        </nav>
+    </header>
+
+    <main>
+        <div class="temples-container" id="temples">
+            <!-- Temple cards will be inserted here by JavaScript -->
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; <span id="year"></span> Temple Gallery</p>
+        <p>Last modified: <span id="last-modified"></span></p>
+    </footer>
+
+    <!-- JavaScript File -->
+    <script src="scripts/filtered-temples.js" defer></script>
+
+    <script>
+        // Set dynamic footer year and last modified date
+        document.getElementById("year").textContent = new Date().getFullYear();
+        document.getElementById("last-modified").textContent = document.lastModified;
+    </script>
+</body>
+
+</html>
