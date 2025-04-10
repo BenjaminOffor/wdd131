@@ -1,81 +1,89 @@
+/* Import Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
 /* styles for your page */
 body {
-  font-family: 'Poppins', Arial, sans-serif;
-  background-color: #f9f9f9;
-  margin: 0;
-  padding: 0;
+    font-family: 'Poppins', Arial, sans-serif;
+    background-color: #f9f9f9;
+    margin: 0;
+    padding: 0;
 }
 
 header {
-  background-color: #2a3d66;
-  color: white;
-  padding: 1rem;
-  text-align: center;
+    background-color: #2a3d66;
+    color: white;
+    padding: 1rem;
+    text-align: center;
 }
 
 nav button {
-  margin: 0.5rem;
-  padding: 10px 20px;
-  background-color: #4CAF50;
-  color: white;
-  border: none;
-  cursor: pointer;
+    margin: 0.5rem;
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    cursor: pointer;
 }
 
 nav button:hover {
-  background-color: #45a049;
+    background-color: #45a049;
 }
 
 /* Add hover for nav anchor tags */
 nav a {
-  color: white;
-  text-decoration: none;
-  padding: 10px 20px;
-  display: inline-block;
+    color: white;
+    text-decoration: none;
+    padding: 10px 20px;
+    display: inline-block;
 }
 
 nav a:hover {
-  background-color: #ddd;
-  color: #000;
-  text-decoration: underline;
+    background-color: #ddd;
+    color: #000;
+    text-decoration: underline;
+}
+
+/* Center content in the main element */
+main {
+    text-align: center;
 }
 
 .temples-container {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  padding: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 20px;
 }
 
 .temple-card {
-  background-color: white;
-  margin: 20px;
-  padding: 20px;
-  border-radius: 8px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  width: 250px;
+    background-color: white;
+    margin: 20px;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 250px;
 }
 
 .temple-card img {
-  width: 100%;
-  height: auto;
-  border-radius: 8px;
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
 }
 
 .temple-card h2 {
-  text-align: center;
-  font-size: 1.2rem;
-  margin: 10px 0;
+    text-align: center;
+    font-size: 1.2rem;
+    margin: 10px 0;
 }
 
 .temple-card p {
-  font-size: 1rem;
-  margin: 5px 0;
+    font-size: 1rem;
+    margin: 5px 0;
 }
 
 footer {
-  text-align: center;
-  padding: 10px;
-  background-color: #2a3d66;
-  color: white;
+    text-align: center;
+    padding: 10px;
+    background-color: #2a3d66;
+    color: white;
 }
