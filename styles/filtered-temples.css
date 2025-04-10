@@ -9,14 +9,14 @@ body {
     padding: 0;
   }
   
-  header {
+header {
     background-color: #2a3d66;
     color: white;
     padding: 1rem;
     text-align: center;
   }
   
-  nav button {
+nav button {
     margin: 0.5rem;
     padding: 10px 20px;
     background-color: #4CAF50;
@@ -25,18 +25,32 @@ body {
     cursor: pointer;
   }
   
-  nav button:hover {
+nav button:hover {
     background-color: #45a049;
   }
-  
-  .temples-container {
+
+/* Add hover for nav anchor tags */
+nav a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 20px;
+    display: inline-block;
+}
+
+nav a:hover {
+    background-color: #ddd;
+    color: #000;
+    text-decoration: underline;
+}
+
+.temples-container {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     padding: 20px;
   }
   
-  .temple-card {
+.temple-card {
     background-color: white;
     margin: 20px;
     padding: 20px;
@@ -45,27 +59,26 @@ body {
     width: 250px;
   }
   
-  .temple-card img {
+.temple-card img {
     width: 100%;
     height: auto;
     border-radius: 8px;
   }
   
-  .temple-card h2 {
+.temple-card h2 {
     text-align: center;
     font-size: 1.2rem;
     margin: 10px 0;
   }
   
-  .temple-card p {
+.temple-card p {
     font-size: 1rem;
     margin: 5px 0;
   }
   
-  footer {
+footer {
     text-align: center;
     padding: 10px;
     background-color: #2a3d66;
     color: white;
   }
-  
