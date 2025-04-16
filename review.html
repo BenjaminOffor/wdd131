@@ -13,6 +13,10 @@
 
   <main>
     <p>Your review has been submitted successfully.</p>
+    
+    <!-- Displaying submitted review details -->
+    <div id="reviewDetails"></div>
+    
     <p>You have submitted <span id="reviewCount">0</span> review(s).</p>
   </main>
 
@@ -27,6 +31,19 @@
     const newCount = count ? parseInt(count) + 1 : 1;
     localStorage.setItem("reviewCount", newCount);
     document.getElementById("reviewCount").textContent = newCount;
+
+    // Extract URL parameters
+    const urlParams = new URLSearchParams(window.location.search);
+    const productName = urlParams.get("productName");
+    const rating = urlParams.get("rating");
+    const features = urlParams.getAll("features");
+    
+    // Display the review details
+    document.getElementById("reviewDetails").innerHTML = `
+      <p>Product: ${productName}</p>
+      <p>Rating: ${rating}</p>
+      <p>Features: ${features.join(", ")}</p>
+    `;
 
     // Footer dates
     document.getElementById("year").textContent = new Date().getFullYear();
