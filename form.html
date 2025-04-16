@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Product Review Form</title>
+  <link rel="stylesheet" href="styles/form.css">
+</head>
+<body>
+  <header>
+    <h1>Product Review Form</h1>
+  </header>
+
+  <main>
+    <form method="get" action="review.html">
+      <!-- Product Name -->
+      <label for="productName">Product Name:</label>
+      <select id="productName" name="productName" required>
+        <option value="" disabled selected>Select a Product ...</option>
+        <!-- Options will be inserted by JavaScript -->
+      </select>
+
+      <!-- Overall Rating -->
+      <fieldset>
+        <legend>Overall Rating:</legend>
+        <label>
+          <input type="radio" id="star1" name="rating" value="1" required>
+          ☆
+        </label>
+        <label>
+          <input type="radio" id="star2" name="rating" value="2">
+          ☆☆
+        </label>
+        <label>
+          <input type="radio" id="star3" name="rating" value="3">
+          ☆☆☆
+        </label>
+        <label>
+          <input type="radio" id="star4" name="rating" value="4">
+          ☆☆☆☆
+        </label>
+        <label>
+          <input type="radio" id="star5" name="rating" value="5">
+          ☆☆☆☆☆
+        </label>
+      </fieldset>
+
+      <!-- Date of Installation -->
+      <label for="installDate">Date of Installation:</label>
+      <input type="date" id="installDate" name="installDate" required>
+
+      <!-- Useful Features -->
+      <fieldset>
+        <legend>Useful Features (check all that apply):</legend>
+        <label>
+          <input type="checkbox" id="feature1" name="features" value="Feature1"> Feature 1
+        </label>
+        <label>
+          <input type="checkbox" id="feature2" name="features" value="Feature2"> Feature 2
+        </label>
+        <label>
+          <input type="checkbox" id="feature3" name="features" value="Feature3"> Feature 3
+        </label>
+      </fieldset>
+
+      <!-- Written Review -->
+      <label for="review">Written Review (optional):</label>
+      <textarea id="review" name="review" rows="5" cols="33" placeholder="Write your review here..."></textarea>
+
+      <!-- User Name -->
+      <label for="userName">Your Name (optional):</label>
+      <input type="text" id="userName" name="userName" placeholder="Your name">
+
+      <!-- Submit Button -->
+      <input type="submit" value="Submit Review">
+    </form>
+  </main>
+
+  <footer>
+    <p>&copy; <span id="year"></span> | Product Reviews</p>
+    <p>Last Modified: <span id="lastModified"></span></p>
+  </footer>
+
+  <!-- JavaScript Files -->
+  <script src="scripts/form.js"></script>
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+    document.getElementById("lastModified").textContent = document.lastModified;
+  </script>
+</body>
+</html>
