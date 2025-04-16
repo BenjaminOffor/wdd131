@@ -1,0 +1,67 @@
+/* Base Styles */
+body {
+    font-family: 'Open Sans', sans-serif;
+    background-color: #ffffff;
+    color: #333;
+    margin: 20px;
+    padding: 20px;
+    line-height: 1.6;
+  }
+  
+  /* Typography */
+  h1, h2 {
+    font-family: 'Roboto Slab', serif;
+    color: #004080;
+  }
+  
+  h1 {
+    border-bottom: 2px solid #004080;
+    padding-bottom: 5px;
+  }
+  
+  /* Section Layout */
+  section {
+    margin-bottom: 30px;
+  }
+  
+  /* Wireframes */
+  .wireframes img {
+    max-width: 100%;
+    height: auto;
+    border: 1px solid #ccc;
+    padding: 5px;
+    border-radius: 4px;
+  }
+  
+  /* Color Schema Boxes */
+  .color-box {
+    display: inline-block;
+    width: 100px;
+    height: 30px;
+    margin: 5px;
+    border: 1px solid #000;
+    vertical-align: middle;
+    border-radius: 4px;
+  }
+  
+  .primary {
+    background-color: #004080;
+  }
+  
+  .accent {
+    background-color: #f4a300;
+  }
+  
+  /* Responsive Enhancements */
+  @media (max-width: 600px) {
+    body {
+      margin: 10px;
+      padding: 10px;
+    }
+  
+    .color-box {
+      width: 80px;
+      height: 25px;
+    }
+  }
+  
