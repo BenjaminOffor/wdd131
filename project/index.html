@@ -1,68 +1,47 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Ghana Chamber of Commerce</title>
-  <link rel="stylesheet" href="project/styles/chamber.css">
-<script src="scripts/chamber.js" defer></script>
-
+  <link rel="stylesheet" href="styles/chamber.css" />
 </head>
 <body>
   <header>
     <h1>Ghana Chamber of Commerce</h1>
     <nav>
       <ul>
-        <li><a href="#home">Home</a></li>
-        <li><a href="#about">About Us</a></li>
-        <li><a href="#directory">Member Directory</a></li>
-        <li><a href="#events">Events</a></li>
-        <li><a href="#resources">Resources</a></li>
-        <li><a href="#contact">Contact</a></li>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">About Us</a></li>
+        <li><a href="#">Directory</a></li>
+        <li><a href="#">Events</a></li>
+        <li><a href="#">Resources</a></li>
+        <li><a href="#">Contact</a></li>
       </ul>
     </nav>
   </header>
 
   <main>
-    <section id="home">
-      <h2>Welcome to the Ghana Chamber of Commerce</h2>
-      <p>Your hub for business development, networking, and economic growth in Ghana.</p>
-    </section>
-
-    <section id="about">
-      <h2>About Us</h2>
-      <p>We promote trade and industry in Ghana. Learn more about our mission and vision.</p>
-    </section>
-
-    <section id="directory">
-      <h2>Member Directory</h2>
-      <div id="business-list"></div>
+    <section class="resources">
+      <h2>Resources</h2>
+      <p>Access tools and information to support your business in Ghana.</p>
+      <ul>
+        <li><a href="https://gra.gov.gh/" target="_blank">Ghana Revenue Authority (GRA)</a></li>
+        <li><a href="https://www.gipc.gov.gh/" target="_blank">Ghana Investment Promotion Centre (GIPC)</a></li>
+        <li><a href="https://moti.gov.gh/" target="_blank">Ministry of Trade and Industry (MoTI)</a></li>
+        <li><a href="https://www.bog.gov.gh/" target="_blank">Bank of Ghana (BoG)</a></li>
+        <li><a href="https://www.agricinghana.com/" target="_blank">Agricultural Business Support</a></li>
+      </ul>
     </section>
 
     <section class="directory">
-        <h2>Member Directory</h2>
-        <div id="directory-container" class="cards"></div>
-      </section>
-
-    <section id="events">
-      <h2>Upcoming Events</h2>
-      <p>Stay tuned for upcoming trade shows, seminars, and more.</p>
-    </section>
-
-    <section id="resources">
-      <h2>Resources</h2>
-      <p>Access tools and information to support your business in Ghana.</p>
-    </section>
-
-    <section id="contact">
-      <h2>Contact Us</h2>
-      <p>Email: info@ghanachamber.org | Phone: +233 30 123 4567</p>
-      <p>Follow us on social media: Facebook | Twitter | LinkedIn</p>
+      <h2>Business Directory</h2>
+      <div id="directory-list" class="directory-container"></div>
     </section>
   </main>
 
   <footer>
-    <p>&copy; 2025 Ghana Chamber of Commerce. All rights reserved.</p>
+    <p>&copy; <span id="year"></span> Ghana Chamber of Commerce</p>
   </footer>
 
   <script src="scripts/chamber.js"></script>
