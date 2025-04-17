@@ -96,7 +96,7 @@ main {
     color: #003366;
     margin-bottom: 1rem;
 }
-
+        
 .button {
     display: inline-block;
     background-color: #003366;
@@ -111,7 +111,7 @@ main {
     border: none;
     z-index: 2;
 }
-
+        
 .button:hover {
     background-color: #002244;
 }
@@ -131,7 +131,7 @@ main {
     color: #003366;
     margin-bottom: 1rem;
 }
-
+        
 .resources ul {
     list-style-type: disc;
     padding-left: 20px;
@@ -296,4 +296,3 @@ form {
       width: 95%;
     }
   }
-</sty

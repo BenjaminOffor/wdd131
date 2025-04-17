@@ -3,7 +3,7 @@ const directoryData = [
         "name": "Tech Innovators Ltd.",
         "address": "123 Innovation St, Accra, Ghana",
         "phone": "+233 24 123 4567",
-        "website": "[https://techinnovators.com](https://techinnovators.com)",
+        "website": "https://techinnovators.com",
         "image": "images/tech-innovators.png",
         "level": "Gold",
         "dedicated": "2010, January, 15",
@@ -13,7 +13,7 @@ const directoryData = [
         "name": "Global Traders Inc.",
         "address": "45 Market Road, Kumasi, Ghana",
         "phone": "+233 54 987 6543",
-        "website": "[https://globaltraders.com](https://globaltraders.com)",
+        "website": "https://globaltraders.com",
         "image": "images/global-traders.png",
         "level": "Silver",
         "dedicated": "1995, March, 10",
@@ -23,7 +23,7 @@ const directoryData = [
         "name": "Green Energy Solutions",
         "address": "789 Eco Drive, Tamale, Ghana",
         "phone": "+233 20 876 5432",
-        "website": "[https://greenenergy.com](https://greenenergy.com)",
+        "website": "https://greenenergy.com",
         "image": "images/green-energy.png",
         "level": "Member",
         "dedicated": "2018, July, 22",
@@ -33,7 +33,7 @@ const directoryData = [
         "name": "Financial Services Hub",
         "address": "102 Finance Ave, Takoradi, Ghana",
         "phone": "+233 55 345 6789",
-        "website": "[https://financehub.com](https://financehub.com)",
+        "website": "https://financehub.com",
         "image": "images/finance-hub.png",
         "level": "Gold",
         "dedicated": "2005, November, 5",
@@ -43,7 +43,7 @@ const directoryData = [
         "name": "AgroTech Farms",
         "address": "67 Agri Street, Cape Coast, Ghana",
         "phone": "+233 25 678 9012",
-        "website": "[https://agrotechfarms.com](https://agrotechfarms.com)",
+        "website": "https://agrotechfarms.com",
         "image": "images/agrotech-farms.png",
         "level": "Silver",
         "dedicated": "1980, September, 18",
@@ -53,7 +53,7 @@ const directoryData = [
         "name": "HealthCare Plus",
         "address": "88 Wellness Rd, Accra, Ghana",
         "phone": "+233 30 456 7890",
-        "website": "[https://healthcareplus.com](https://healthcareplus.com)",
+        "website": "https://healthcareplus.com",
         "image": "images/healthcare-plus.png",
         "level": "Member",
         "dedicated": "2022, February, 12",
@@ -63,7 +63,7 @@ const directoryData = [
         "name": "Digital Solutions Agency",
         "address": "150 Web Drive, Tema, Ghana",
         "phone": "+233 28 654 3210",
-        "website": "[https://digitalsolutions.com](https://digitalsolutions.com)",
+        "website": "https://digitalsolutions.com",
         "image": "images/digital-solutions.png",
         "level": "Gold",
         "dedicated": "2019, June, 30",
@@ -73,7 +73,7 @@ const directoryData = [
         "name": "Golden Coast Exports",
         "address": "23 Export Lane, Sekondi, Ghana",
         "phone": "+233 31 234 5678",
-        "website": "[https://goldencoastexports.com](https://goldencoastexports.com)",
+        "website": "https://goldencoastexports.com",
         "image": "images/golden-coast-exports.jpg",
         "level": "Gold",
         "dedicated": "1990, April, 1",
@@ -83,7 +83,7 @@ const directoryData = [
         "name": "Savannah Grains Ltd.",
         "address": "987 Harvest Way, Tamale, Ghana",
         "phone": "+233 50 876 5432",
-        "website": "[https://savannahgrains.com](https://savannahgrains.com)",
+        "website": "https://savannahgrains.com",
         "image": "images/savannah-grains.jpg",
         "level": "Silver",
          "dedicated": "2008, October, 28",
@@ -93,7 +93,7 @@ const directoryData = [
         "name": "Tech Frontier Innovations",
         "address": "44 Innovation Ave, Accra, Ghana",
         "phone": "+233 29 123 4567",
-        "website": "[https://techfrontier.com](https://techfrontier.com)",
+        "website": "https://techfrontier.com",
         "image": "images/tech-frontier-innovations.jpg",
         "level": "Member",
         "dedicated": "2023, January, 15",
@@ -122,7 +122,7 @@ const directoryData = [
     }
 
     // Initial rendering of directory
-    renderDirectory();
+    renderDirectory();  // Call renderDirectory here to display all entries on initial load
 
     // --- Navigation filtering ---
     const navItems = document.querySelectorAll('nav ul li');
