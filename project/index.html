@@ -11,200 +11,468 @@
     <link rel="stylesheet" href="styles/chamber.css" />
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     <style>
-      body {
-        font-family: 'Inter', sans-serif;
-      }
-    </style>
+        body {
+            font-family: 'Inter', sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+            align-items: center;
+            background-color: #f4f4f4;
+        }
+
+        header {
+            background-color: #003366;
+            color: white;
+            padding: 1rem;
+            text-align: center;
+            width: 100%;
+            position: relative; /* Added for positioning the overlay */
+        }
+
+        header h1{
+            font-size: 1.8rem;
+            margin-bottom: 0.5rem;
+            z-index: 2; /* Ensure heading is above the overlay */
+            position: relative;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            margin-bottom: 0;
+            flex-wrap: wrap; /* Make menu wrap on smaller screens */
+            z-index: 2; /* Ensure nav is above the overlay */
+            position: relative;
+        }
+
+        nav ul li {
+            margin: 0.5rem 0; /* Add vertical margin for better spacing on small screens */
+            cursor: pointer;
+            font-weight: 600;
+            color: #eee;
+        }
+
+        nav ul li:hover {
+            color: #fff;
+            text-decoration: underline;
+        }
+
+        main {
+            padding: 2rem;
+            flex-grow: 1;
+            max-width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            position: relative; /* Needed for absolute positioning of children */
+        }
+
+        .banner-image {
+            width: 100%;
+            height: 300px; /* Adjust as needed */
+            object-fit: cover;
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: 1;
+            opacity: 0.5; /* Adjust opacity for desired effect */
+        }
+
+        .site-description{
+            margin-bottom: 2rem;
+            text-align: center;
+            padding: 1rem;
+            position: relative;
+            z-index: 2;
+            background-color: rgba(255,255,255,0.7); /* added a background to increase readability of the text*/
+            border-radius: 8px;
+        }
+
+        .join-us {
+            text-align: center;
+            margin-bottom: 2rem;
+            position: relative;
+            z-index: 2;
+            background-color: rgba(255,255,255,0.7); /* added a background to increase readability of the text*/
+            border-radius: 8px;
+            padding: 1rem;
+
+        }
+
+        .join-us h2{
+            font-size: 2rem;
+            color: #003366;
+            margin-bottom: 1rem;
+        }
+        
+        .button {
+            display: inline-block;
+            background-color: #003366;
+            color: white;
+            padding: 0.75rem 1.5rem;
+            text-decoration: none;
+            border-radius: 4px;
+            font-size: 1rem;
+            transition: background-color 0.3s ease;
+            margin-top: 1rem;
+            cursor: pointer;
+            border: none;
+            z-index: 2;
+        }
+        
+        .button:hover {
+            background-color: #002244;
+        }
+
+        .resources {
+          margin-bottom: 2rem;
+          position: relative;
+          z-index: 2;
+          background-color: rgba(255,255,255,0.7); /* added a background to increase readability of the text*/
+          padding: 1rem;
+          border-radius: 8px;
+
+        }
+
+        .resources h2{
+            font-size: 2rem;
+            color: #003366;
+            margin-bottom: 1rem;
+        }
+        
+        .resources ul {
+            list-style-type: disc;
+            padding-left: 20px;
+            margin-bottom: 0;
+        }
+        
+        .resources ul li a{
+          color: #0078d7;
+          text-decoration: none;
+        }
+
+        .resources ul li a:hover{
+            text-decoration: underline;
+        }
+
+        .directory h2 {
+            font-size: 2rem;
+            color: #003366;
+            margin-bottom: 1rem;
+            position: relative;
+            z-index: 2;
+            background-color: rgba(255,255,255,0.7); /* added a background to increase readability of the text*/
+            padding: 1rem;
+            border-radius: 8px;
+        }
+
+        .directory-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 1.5rem;
+            margin-top: 1rem;
+            position: relative;
+            z-index: 2;
+
+        }
+        
+        .directory-card {
+            background-color: white;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            margin: 1rem;
+            padding: 1rem;
+            width: 300px;
+            text-align: center;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: center;
+            position: relative;
+            z-index: 2;
+        }
+        
+        .directory-card img {
+            width: 100%;
+            border-radius: 4px;
+            margin-bottom: 0.5rem;
+            aspect-ratio: 4 / 3;
+            object-fit: cover;
+            loading: lazy;
+            z-index: 2;
+        }
+        
+        .directory-card h3 {
+            font-size: 1.2rem;
+            margin-bottom: 0.5rem;
+            color: #003366;
+            z-index: 2;
+            position: relative;
+        }
+        
+        .directory-card p {
+            margin-bottom: 0.5rem;
+            font-size: 1rem;
+            z-index: 2;
+            position: relative;
+
+    }
+    
+        .directory-card a {
+            color: #0078d7;
+            text-decoration: none;
+            z-index: 2;
+            position: relative;
+
+        }
+        
+        .directory-card a:hover {
+            text-decoration: underline;
+            z-index: 2;
+        }
+
+    footer {
+        background-color: #333;
+        color: white;
+        padding: 1rem;
+        text-align: center;
+        width: 100%;
+        margin-top: 1rem;
+        font-size: 0.9rem;
+        position: relative;
+        z-index: 2;
+    }
+    
+    @media (max-width: 768px) {
+        main {
+          flex-direction: column;
+          align-items: center;
+        }
+    
+        nav ul {
+          flex-direction: column;
+        }
+    
+        nav ul li {
+          margin: 0.5rem 0;
+        }
+    }
+</style>
 </head>
 <body>
-    <header>
-        <h1>Ghana Chamber of Commerce</h1>
-        <nav>
-            <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="#">About Us</a></li>
-                <li><a href="#">Directory</a></li>
-                <li><a href="#">Events</a></li>
-                <li><a href="#">Resources</a></li>
-                <li><a href="#">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
+<header>
+    <h1>Ghana Chamber of Commerce</h1>
+    <nav>
+        <ul>
+            <li data-filter="all">Home</li>
+            <li><a href="about.html">About Us</a></li>
+            <li data-filter="directory">Directory</li>  <li><a href="events.html">Events</a></li>
+            <li data-filter="resources">Resources</li>  <li><a href="contact.html">Contact</a></li>
+            <li><a href="membership_form.html" class="button">Become a Member</a></li>
+        </ul>
+    </nav>
+</header>
 
-    <main>
-        <section class="site-description">
-             <h2>Welcome to the Ghana Chamber of Commerce</h2>
-             <p>
-                The Ghana Chamber of Commerce is a dynamic platform dedicated to fostering a thriving business environment in Ghana. We support our members through networking, advocacy, resources, and events, connecting businesses across various sectors to drive economic growth. Explore opportunities to connect, grow, and succeed with us.
-             </p>
-        </section>
+<main>
+    <img src="images/ghana-chamber-banner.jpg" alt="Ghana Chamber of Commerce Banner" class="banner-image">
+    <section class="site-description">
+         <h2>Welcome to the Ghana Chamber of Commerce</h2>
+         <p>
+            The Ghana Chamber of Commerce is a dynamic platform dedicated to fostering a thriving business environment in Ghana. We support our members through networking, advocacy, resources, and events, connecting businesses across various sectors to drive economic growth. Explore opportunities to connect, grow, and succeed with us.
+         </p>
+    </section>
 
-        <section class="join-us">
-            <h2>Join Us</h2>
-            <p>Become a member of the Ghana Chamber of Commerce and unlock numerous benefits!</p>
-            <a href="membership_form.html" class="button">Become a Member</a>
-        </section>
+    <section class="join-us">
+        <h2>Join Us</h2>
+        <p>Become a member of the Ghana Chamber of Commerce and unlock numerous benefits!</p>
+        <a href="membership_form.html" class="button">Become a Member</a>
+    </section>
 
-        <section class="resources">
-            <h2>Resources</h2>
-            <p>Access tools and information to support your business in Ghana.</p>
-            <ul>
-                <li><a href="https://gra.gov.gh/" target="_blank">Ghana Revenue Authority (GRA)</a></li>
-                <li><a href="https://www.gipc.gov.gh/" target="_blank">Ghana Investment Promotion Centre (GIPC)</a></li>
-                <li><a href="https://moti.gov.gh/" target="_blank">Ministry of Trade and Industry (MoTI)</a></li>
-                <li><a href="https://www.bog.gov.gh/" target="_blank">Bank of Ghana (BoG)</a></li>
-                <li><a href="https://www.agricinghana.com/" target="_blank">Agricultural Business Support</a></li>
-            </ul>
-        </section>
+    <section class="resources">
+        <h2>Resources</h2>
+        <p>Access tools and information to support your business in Ghana.</p>
+        <ul>
+            <li><a href="https://gra.gov.gh/" target="_blank">Ghana Revenue Authority (GRA)</a></li>
+            <li><a href="https://www.gipc.gov.gh/" target="_blank">Ghana Investment Promotion Centre (GIPC)</a></li>
+            <li><a href="https://moti.gov.gh/" target="_blank">Ministry of Trade and Industry (MoTI)</a></li>
+            <li><a href="https://www.bog.gov.gh/" target="_blank">Bank of Ghana (BoG)</a></li>
+            <li><a href="https://www.agricinghana.com/" target="_blank">Agricultural Business Support</a></li>
+        </ul>
+    </section>
 
-        <section class="directory">
-            <h2>Business Directory</h2>
-            <div id="directory-list" class="directory-container"></div>
-        </section>
-    </main>
+    <section class="directory">
+        <h2>Business Directory</h2>
+        <div id="directory-list" class="directory-container"></div>
+    </section>
+</main>
 
-    <footer>
-        <p>&copy; <span id="year"></span> Ghana Chamber of Commerce</p>
-    </footer>
+<footer>
+    <p>&copy; <span id="year"></span> Ghana Chamber of Commerce | Last Modified: <span id="lastModified"></span></p>
+</footer>
 
-    <script>
-    const directoryData = [
-        {
-            "name": "Tech Innovators Ltd.",
-            "address": "123 Innovation St, Accra, Ghana",
-            "phone": "+233 24 123 4567",
-            "website": "https://techinnovators.com",
-            "image": "images/tech-innovators.png",
-            "level": "Gold"
-          },
-          {
-            "name": "Global Traders Inc.",
-            "address": "45 Market Road, Kumasi, Ghana",
-            "phone": "+233 54 987 6543",
-            "website": "https://globaltraders.com",
-            "image": "images/global-traders.png",
-            "level": "Silver"
-          },
-          {
-            "name": "Green Energy Solutions",
-            "address": "789 Eco Drive, Tamale, Ghana",
-            "phone": "+233 20 876 5432",
-            "website": "https://greenenergy.com",
-            "image": "images/green-energy.png",
-            "level": "Member"
-          },
-          {
-            "name": "Financial Services Hub",
-            "address": "102 Finance Ave, Takoradi, Ghana",
-            "phone": "+233 55 345 6789",
-            "website": "https://financehub.com",
-            "image": "images/finance-hub.png",
-            "level": "Gold"
-          },
-          {
-            "name": "AgroTech Farms",
-            "address": "67 Agri Street, Cape Coast, Ghana",
-            "phone": "+233 25 678 9012",
-            "website": "https://agrotechfarms.com",
-            "image": "images/agrotech-farms.png",
-            "level": "Silver"
-          },
-          {
-            "name": "HealthCare Plus",
-            "address": "88 Wellness Rd, Accra, Ghana",
-            "phone": "+233 30 456 7890",
-            "website": "https://healthcareplus.com",
-            "image": "images/healthcare-plus.png",
-            "level": "Member"
-          },
-          {
-            "name": "Digital Solutions Agency",
-            "address": "150 Web Drive, Tema, Ghana",
-            "phone": "+233 28 654 3210",
-            "website": "https://digitalsolutions.com",
-            "image": "images/digital-solutions.png",
-            "level": "Gold"
-          },
-          {
-            "name": "Golden Coast Exports",
-            "address": "23 Export Lane, Sekondi, Ghana",
-            "phone": "+233 31 234 5678",
-            "website": "https://goldencoastexports.com",
-            "image": "images/golden-coast-exports.jpg",
-            "level": "Gold"
-          },
-          {
-            "name": "Savannah Grains Ltd.",
-            "address": "987 Harvest Way, Tamale, Ghana",
-            "phone": "+233 50 876 5432",
-            "website": "https://savannahgrains.com",
-            "image": "images/savannah-grains.jpg",
-            "level": "Silver"
-          },
-          {
-            "name": "Tech Frontier Innovations",
-            "address": "44 Innovation Ave, Accra, Ghana",
-            "phone": "+233 29 123 4567",
-            "website": "https://techfrontier.com",
-            "image": "images/tech-frontier-innovations.jpg",
-            "level": "Member"
-          }
-    ];
+<script>
+const directoryData = [
+    {
+        "name": "Tech Innovators Ltd.",
+        "address": "123 Innovation St, Accra, Ghana",
+        "phone": "+233 24 123 4567",
+        "website": "https://techinnovators.com",
+        "image": "images/tech-innovators.png",
+        "level": "Gold",
+        "dedicated": "2010, January, 15",
+        "area": 25000
+      },
+      {
+        "name": "Global Traders Inc.",
+        "address": "45 Market Road, Kumasi, Ghana",
+        "phone": "+233 54 987 6543",
+        "website": "https://globaltraders.com",
+        "image": "images/global-traders.png",
+        "level": "Silver",
+        "dedicated": "1995, March, 10",
+         "area": 80000
+      },
+      {
+        "name": "Green Energy Solutions",
+        "address": "789 Eco Drive, Tamale, Ghana",
+        "phone": "+233 20 876 5432",
+        "website": "https://greenenergy.com",
+        "image": "images/green-energy.png",
+        "level": "Member",
+        "dedicated": "2018, July, 22",
+         "area": 9500
+      },
+      {
+        "name": "Financial Services Hub",
+        "address": "102 Finance Ave, Takoradi, Ghana",
+        "phone": "+233 55 345 6789",
+        "website": "https://financehub.com",
+        "image": "images/finance-hub.png",
+        "level": "Gold",
+        "dedicated": "2005, November, 5",
+         "area": 120000
+      },
+      {
+        "name": "AgroTech Farms",
+        "address": "67 Agri Street, Cape Coast, Ghana",
+        "phone": "+233 25 678 9012",
+        "website": "https://agrotechfarms.com",
+        "image": "images/agrotech-farms.png",
+        "level": "Silver",
+        "dedicated": "1980, September, 18",
+         "area": 60000
+      },
+      {
+        "name": "HealthCare Plus",
+        "address": "88 Wellness Rd, Accra, Ghana",
+        "phone": "+233 30 456 7890",
+        "website": "https://healthcareplus.com",
+        "image": "images/healthcare-plus.png",
+        "level": "Member",
+        "dedicated": "2022, February, 12",
+         "area": 8500
+      },
+      {
+        "name": "Digital Solutions Agency",
+        "address": "150 Web Drive, Tema, Ghana",
+        "phone": "+233 28 654 3210",
+        "website": "https://digitalsolutions.com",
+        "image": "images/digital-solutions.png",
+        "level": "Gold",
+        "dedicated": "2019, June, 30",
+         "area": 105000
+      },
+      {
+        "name": "Golden Coast Exports",
+        "address": "23 Export Lane, Sekondi, Ghana",
+        "phone": "+233 31 234 5678",
+        "website": "https://goldencoastexports.com",
+        "image": "images/golden-coast-exports.jpg",
+        "level": "Gold",
+        "dedicated": "1990, April, 1",
+         "area": 140000
+      },
+      {
+        "name": "Savannah Grains Ltd.",
+        "address": "987 Harvest Way, Tamale, Ghana",
+        "phone": "+233 50 876 5432",
+        "website": "https://savannahgrains.com",
+        "image": "images/savannah-grains.jpg",
+        "level": "Silver",
+         "dedicated": "2008, October, 28",
+         "area": 70000
+      },
+      {
+        "name": "Tech Frontier Innovations",
+        "address": "44 Innovation Ave, Accra, Ghana",
+        "phone": "+233 29 123 4567",
+        "website": "https://techfrontier.com",
+        "image": "images/tech-frontier-innovations.jpg",
+        "level": "Member",
+        "dedicated": "2023, January, 15",
+         "area": 10000
+      }
+];
 
-    function renderDirectory() {
-        const container = document.getElementById('directory-list');
-        container.innerHTML = ''; // Clear previous content
+function renderDirectory(filteredData = directoryData) {
+    const container = document.getElementById('directory-list');
+    container.innerHTML = ''; // Clear previous content
 
-        directoryData.forEach(biz => {
-            const card = document.createElement('div');
-            card.className = 'directory-card';
+    filteredData.forEach(biz => { // Use filteredData
+        const card = document.createElement('div');
+        card.className = 'directory-card';
 
-            card.innerHTML = `
-                <img src="${biz.image}" alt="${biz.name}">
-                <h3>${biz.name}</h3>
-                <p><strong>Address:</strong> ${biz.address}</p>
-                <p><strong>Phone:</strong> ${biz.phone}</p>
-                <p><strong>Membership Level:</strong> ${biz.level}</p>
-                <p><a href="${biz.website}" target="_blank">Visit Website</a></p>
-            `;
-            container.appendChild(card);
-        });
-    }
-
-    // Initial rendering of directory
-    renderDirectory();
-
-    // --- Navigation filtering ---
-    const navItems = document.querySelectorAll('nav ul li');
-    navItems.forEach(item => {
-        item.addEventListener('click', () => {
-            const filter = item.getAttribute('data-filter');
-            
-            let filteredData;
-            switch (filter) {
-                case 'old':
-                    filteredData = directoryData.filter(member => parseInt(member.dedicated.split(",")[0]) < 1900);
-                    break;
-                case 'new':
-                    filteredData = directoryData.filter(member => parseInt(member.dedicated.split(",")[0]) > 2000);
-                    break;
-                case 'large':
-                    filteredData = directoryData.filter(member => member.area > 90000);
-                    break;
-                case 'small':
-                    filteredData = directoryData.filter(member => member.area < 10000);
-                    break;
-                case 'all':
-                default:
-                    filteredData = directoryData;
-            }
-            renderDirectory();
-        });
+        card.innerHTML = `
+            <img src="${biz.image}" alt="${biz.name}" loading="lazy">
+            <h3>${biz.name}</h3>
+            <p><strong>Address:</strong> ${biz.address}</p>
+            <p><strong>Phone:</strong> ${biz.phone}</p>
+            <p><strong>Membership Level:</strong> ${biz.level}</p>
+            <p><a href="${biz.website}" target="_blank">Visit Website</a></p>
+        `;
+        container.appendChild(card);
     });
+}
 
-    // --- Footer ---
-    document.getElementById("year").textContent = new Date().getFullYear();
-    document.getElementById("lastModified").textContent = document.lastModified;
-    </script>
+// Initial rendering of directory
+renderDirectory();
+
+// --- Navigation filtering ---
+const navItems = document.querySelectorAll('nav ul li');
+navItems.forEach(item => {
+    item.addEventListener('click', () => {
+        const filter = item.getAttribute('data-filter');
+        
+        let filteredData;
+        switch (filter) {
+            case 'old':
+                filteredData = directoryData.filter(member => parseInt(member.dedicated.split(",")[0]) < 1900);
+                break;
+            case 'new':
+                filteredData = directoryData.filter(member => parseInt(member.dedicated.split(",")[0]) > 2000);
+                break;
+            case 'large':
+                filteredData = directoryData.filter(member => member.area > 90000);
+                break;
+            case 'small':
+                filteredData = directoryData.filter(member => member.area < 10000);
+            default:
+                filteredData = directoryData;
+        }
+        renderDirectory(filteredData);
+    });
+});
+
+// --- Footer ---
+document.getElementById("year").textContent = new Date().getFullYear();
+document.getElementById("lastModified").textContent = document.lastModified;
+</script>
 </body>
 </html>
