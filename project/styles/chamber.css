@@ -15,33 +15,31 @@ header {
     padding: 1rem;
     text-align: center;
     width: 100%;
-    position: relative; /* Added for positioning the overlay */
+    position: relative;
 }
 
-header h1{
+header h1 {
     font-size: 1.8rem;
     margin-bottom: 0.5rem;
-    z-index: 2; /* Ensure heading is above the overlay */
+    z-index: 2;
     position: relative;
 }
 
 nav ul {
-    list-style: none;
+    list-style-type: none;
     padding: 0;
+    margin: 0;
     display: flex;
-    justify-content: center;
-    gap: 1rem;
-    margin-bottom: 0;
-    flex-wrap: wrap; /* Make menu wrap on smaller screens */
-    z-index: 2; /* Ensure nav is above the overlay */
-    position: relative;
+    justify-content: space-around;
+    background-color: #333; /* You can change the background color as needed */
 }
 
 nav ul li {
-    margin: 0.5rem 0; /* Add vertical margin for better spacing on small screens */
+    margin: 0.5rem 0;
     cursor: pointer;
     font-weight: 600;
     color: #eee;
+    padding: 0.25rem 0.5rem;
 }
 
 nav ul li:hover {
@@ -49,6 +47,32 @@ nav ul li:hover {
     text-decoration: underline;
 }
 
+/* Active filter item style */
+nav ul li.active {
+    background-color: #0078d7;
+    color: white;
+    border-radius: 4px;
+}
+
+
+/* Style for each navigation item */
+nav ul li {
+    display: inline;
+}
+
+/* Style for each anchor link inside the navigation */
+nav ul li a {
+    text-decoration: none;
+    color: white; /* Make the text color white */
+    padding: 15px;
+    font-size: 16px;
+    display: block;
+}
+
+/* Optional: Add hover effect */
+nav ul li a:hover {
+    background-color: #555; /* Change background color on hover */
+}
 main {
     padding: 2rem;
     flex-grow: 1;
@@ -56,27 +80,27 @@ main {
     display: flex;
     flex-direction: column;
     align-items: center;
-    position: relative; /* Needed for absolute positioning of children */
+    position: relative;
 }
 
 .banner-image {
     width: 100%;
-    height: 300px; /* Adjust as needed */
+    height: 300px;
     object-fit: cover;
     position: absolute;
     top: 0;
     left: 0;
     z-index: 1;
-    opacity: 0.5; /* Adjust opacity for desired effect */
+    opacity: 0.5;
 }
 
-.site-description{
+.site-description {
     margin-bottom: 2rem;
     text-align: center;
     padding: 1rem;
     position: relative;
     z-index: 2;
-    background-color: rgba(255,255,255,0.7); /* added a background to increase readability of the text*/
+    background-color: rgba(255,255,255,0.7);
     border-radius: 8px;
 }
 
@@ -85,18 +109,17 @@ main {
     margin-bottom: 2rem;
     position: relative;
     z-index: 2;
-    background-color: rgba(255,255,255,0.7); /* added a background to increase readability of the text*/
+    background-color: rgba(255,255,255,0.7);
     border-radius: 8px;
     padding: 1rem;
-
 }
 
-.join-us h2{
+.join-us h2 {
     font-size: 2rem;
     color: #003366;
     margin-bottom: 1rem;
 }
-        
+
 .button {
     display: inline-block;
     background-color: #003366;
@@ -111,39 +134,38 @@ main {
     border: none;
     z-index: 2;
 }
-        
+
 .button:hover {
     background-color: #002244;
 }
 
 .resources {
-  margin-bottom: 2rem;
-  position: relative;
-  z-index: 2;
-  background-color: rgba(255,255,255,0.7); /* added a background to increase readability of the text*/
-  padding: 1rem;
-  border-radius: 8px;
-
+    margin-bottom: 2rem;
+    position: relative;
+    z-index: 2;
+    background-color: rgba(255,255,255,0.7);
+    padding: 1rem;
+    border-radius: 8px;
 }
 
-.resources h2{
+.resources h2 {
     font-size: 2rem;
     color: #003366;
     margin-bottom: 1rem;
 }
-        
+
 .resources ul {
     list-style-type: disc;
     padding-left: 20px;
     margin-bottom: 0;
 }
-        
-.resources ul li a{
-  color: #0078d7;
-  text-decoration: none;
+
+.resources ul li a {
+    color: #0078d7;
+    text-decoration: none;
 }
 
-.resources ul li a:hover{
+.resources ul li a:hover {
     text-decoration: underline;
 }
 
@@ -153,7 +175,7 @@ main {
     margin-bottom: 1rem;
     position: relative;
     z-index: 2;
-    background-color: rgba(255,255,255,0.7); /* added a background to increase readability of the text*/
+    background-color: rgba(255,255,255,0.7);
     padding: 1rem;
     border-radius: 8px;
 }
@@ -166,9 +188,8 @@ main {
     margin-top: 1rem;
     position: relative;
     z-index: 2;
-
 }
-        
+
 .directory-card {
     background-color: white;
     border: 1px solid #ddd;
@@ -185,7 +206,7 @@ main {
     position: relative;
     z-index: 2;
 }
-        
+
 .directory-card img {
     width: 100%;
     border-radius: 4px;
@@ -195,7 +216,7 @@ main {
     loading: lazy;
     z-index: 2;
 }
-        
+
 .directory-card h3 {
     font-size: 1.2rem;
     margin-bottom: 0.5rem;
@@ -203,23 +224,21 @@ main {
     z-index: 2;
     position: relative;
 }
-        
+
 .directory-card p {
     margin-bottom: 0.5rem;
     font-size: 1rem;
     z-index: 2;
     position: relative;
+}
 
-        }
-        
 .directory-card a {
     color: #0078d7;
     text-decoration: none;
     z-index: 2;
     position: relative;
+}
 
-        }
-        
 .directory-card a:hover {
     text-decoration: underline;
     z-index: 2;
@@ -236,21 +255,6 @@ footer {
     position: relative;
     z-index: 2;
 }
-        
-@media (max-width: 768px) {
-    main {
-      flex-direction: column;
-      align-items: center;
-    }
-
-    nav ul {
-      flex-direction: column;
-    }
-
-    nav ul li {
-      margin: 0.5rem 0;
-    }
-}
 
 form {
     max-width: 600px;
@@ -261,22 +265,23 @@ form {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     display: flex;
     flex-direction: column;
-  }
-  
-  form label {
+}
+
+form label {
     margin-top: 1rem;
     display: block;
-  }
-  
-  form input, form select {
+}
+
+form input,
+form select {
     padding: 0.75rem;
     margin-top: 0.5rem;
     width: 100%;
     border: 1px solid #ccc;
     border-radius: 4px;
-  }
-  
-  form input[type="submit"] {
+}
+
+form input[type="submit"] {
     background-color: #003366;
     color: white;
     padding: 1rem;
@@ -285,14 +290,61 @@ form {
     margin-top: 2rem;
     cursor: pointer;
     font-size: 1rem;
-  }
-  
-  form input[type="submit"]:hover {
+}
+
+form input[type="submit"]:hover {
     background-color: #002244;
-  }
-  
-  @media (max-width: 768px) {
-    form {
-      width: 95%;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+    main {
+        flex-direction: column;
+        align-items: center;
     }
-  }
+
+    nav ul {
+        flex-direction: column;
+    }
+
+    nav ul li {
+        margin: 0.5rem 0;
+    }
+
+    form {
+        width: 95%;
+    }
+}
+
+/* Style for the Upcoming Events Section */
+#upcoming-events {
+    padding: 20px;
+    background-color: #f4f4f4;
+}
+
+#upcoming-events h2 {
+    text-align: center;
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+.event {
+    background-color: white;
+    padding: 15px;
+    margin: 15px 0;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.event h3 {
+    margin-top: 0;
+    font-size: 1.5em;
+}
+
+.event p {
+    margin: 5px 0;
+    font-size: 1em;
+}
+
+.event p strong {
+    font-weight: bold;
+}

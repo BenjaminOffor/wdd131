@@ -1,4 +1,4 @@
-1. index.html (Homepage)<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -16,12 +16,11 @@
         <h1>Ghana Chamber of Commerce</h1>
         <nav>
             <ul>
-                <li data-filter="all">Home</li>
-                <li><a href="about.html">About Us</a></li>
-                <li><a href="directory.html">Directory</a></li>  
-                <li><a href="events.html">Events</a></li>
-                <li><a href="resources.html">Resources</a></li>
-                <li><a href="contact.html">Contact</a></li>
+                <li data-filter="all" class="active">Home</li>
+                <li><a href="#business-directory">Business Directory</a></li>
+                <li><a href="#upcoming-events">Events</a></li> 
+                <li><a href="#business-resources">Resources</a></li> 
+                <li><a href="#footer">Contact Us</a></li>
                 <li><a href="membership_form.html" class="button">Become a Member</a></li>
             </ul>
         </nav>
@@ -29,11 +28,12 @@
 
     <main>
         <img src="images/banner.png" alt="Ghana Chamber of Commerce Banner" class="banner-image">
+
         <section class="site-description">
-             <h2>Welcome to the Ghana Chamber of Commerce</h2>
-             <p>
+            <h2>Welcome to the Ghana Chamber of Commerce</h2>
+            <p>
                 The Ghana Chamber of Commerce is a dynamic platform dedicated to fostering a thriving business environment in Ghana. We support our members through networking, advocacy, resources, and events, connecting businesses across various sectors to drive economic growth. Explore opportunities to connect, grow, and succeed with us.
-             </p>
+            </p>
         </section>
 
         <section class="join-us">
@@ -42,9 +42,34 @@
             <a href="membership_form.html" class="button">Become a Member</a>
         </section>
 
-        <section class="resources">
-            <h2>Resources</h2>
-            <p>Access tools and information to support your business in Ghana.</p>
+        <!-- Upcoming Events Section -->
+    <section id="upcoming-events">
+    <h2>Upcoming Business Events</h2>
+    <div class="event">
+        <h3>Business Leadership Summit</h3>
+        <p><strong>Date:</strong> May 15, 2025</p>
+        <p><strong>Location:</strong> Accra International Conference Centre, Accra, Ghana</p>
+        <p><strong>Description:</strong> Join top business leaders for a summit on innovative leadership in the 21st century. Gain insights on leadership strategies and best practices from industry leaders.</p>
+    </div>
+        <div class="event">
+        <h3>Ghana Tech Expo 2025</h3>
+        <p><strong>Date:</strong> June 10-12, 2025</p>
+        <p><strong>Location:</strong> Trade Fair Centre, Accra, Ghana</p>
+        <p><strong>Description:</strong> The largest tech exhibition in West Africa, featuring cutting-edge technologies, digital transformations, and tech startups. Don't miss networking opportunities with top tech innovators.</p>
+    </div>
+    <div class="event">
+        <h3>Ghana Business and Trade Forum</h3>
+        <p><strong>Date:</strong> July 8, 2025</p>
+        <p><strong>Location:</strong> Movenpick Ambassador Hotel, Accra, Ghana</p>
+        <p><strong>Description:</strong> A one-day forum for business professionals to discuss trade opportunities, investment strategies, and economic growth in Ghana. Connect with key stakeholders in the business community.</p>
+     </div>
+    </section>
+
+
+        <!-- PRESERVED EXACT Business Resources SECTION -->
+        <section id="business-resources">
+            <h2>Business Resources</h2>
+            <p>Here you'll find valuable resources to help you grow your business, including guides, tools, and templates.</p>
             <ul>
                 <li><a href="https://gra.gov.gh/" target="_blank">Ghana Revenue Authority (GRA)</a></li>
                 <li><a href="https://www.gipc.gov.gh/" target="_blank">Ghana Investment Promotion Centre (GIPC)</a></li>
@@ -52,16 +77,21 @@
                 <li><a href="https://www.bog.gov.gh/" target="_blank">Bank of Ghana (BoG)</a></li>
                 <li><a href="https://www.agricinghana.com/" target="_blank">Agricultural Business Support</a></li>
             </ul>
-        </section>
+        </section>        
 
-        <section class="directory">
+        <section id="business-directory">
             <h2>Business Directory</h2>
             <div id="directory-list" class="directory-container"></div>
         </section>
     </main>
 
-    <footer>
-        <p>&copy; <span id="year"></span> Ghana Chamber of Commerce | Last Modified: <span id="lastModified"></span></p>
+    <footer id="footer">
+        <p>&copy; <span id="year"></span> Ghana Chamber of Commerce. All Rights Reserved | Last Modified: <span id="lastModified"></span></p>
+        <!-- Footer Section -->
+        <p><strong>Contact Us:</strong></p>
+        <p>Phone: +233 24 123 4567</p>
+        <p>Email: info@gccghana.org</p>
+        <p>Address: 123 Business Ave, Accra, Ghana</p>
     </footer>
 
     <script src="scripts/chamber.js"></script>
